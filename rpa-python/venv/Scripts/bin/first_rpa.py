@@ -41,213 +41,78 @@ pyautogui.click(100, 200)
 
 items=["PUSH"]
 
-for index,item in enumerate(items):
-    elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[2]/td[1]")
-    sleep(1)
-    elem.click()
-    elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-    elem.clear()
-    sleep(1)
-    elem.send_keys(f"{item}")
-    pyautogui.click(100, 200) 
+def loop(a,items):
+    str(a)
+    for index,item in enumerate(items):
+        try:
+            elem = driver.find_element(By.XPATH, f"/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[{a}]/td[1]")
+            sleep(1)
+            elem.click()
+            elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
+            elem.clear()
+            sleep(1)
+            elem.send_keys(f"{item}")
+            pyautogui.click(100, 200)
+        except:
+            pass
+
+loop(2,items)
 
 items=["DON, 100%","ESTABLISH","IDLE","FULL","10000 FT OR MEA, WHICHEVER IS HIGHER","MAX APPROPRIATE","ON","7700"]
 
-for index,item in enumerate(items):
-    elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[3]/td[1]")
-    sleep(1)
-    elem.click()
-    elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-    elem.clear()
-    sleep(1)
-    elem.send_keys(f"{item}")
-    pyautogui.click(100, 200)
+loop(3,items)
 
 items=["DON,EMER","DON"]
 
-for index,item in enumerate(items):
-    elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[4]/td[1]")
-    sleep(1)
-    elem.click()
-    elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-    elem.clear()                       
-    sleep(1)
-    elem.send_keys(f"{item}")
-    pyautogui.click(100, 200)
+loop(4,items)
 
 items=["MIN 260 KIAS"]
 
-for index,item in enumerate(items):
-    elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[5]/td[1]")
-    sleep(1)
-    elem.click()
-    elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-    elem.clear()                       
-    sleep(1)
-    elem.send_keys(f"{item}")
-    pyautogui.click(100, 200)
+loop(5,items)
 
 items=["IDLE","FULL","MAX APPROPRIATE","10000 FT OR MEA, WHICHEVER IS HIGHER","7700"]
 
-for index,item in enumerate(items):
-    elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[6]/td[1]")
-    sleep(1)
-    elem.click()
-    elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-    elem.clear()                       
-    sleep(1)
-    elem.send_keys(f"{item}")
-    pyautogui.click(100, 200)
+loop(6,items)
 
 items=["DISENGAGE","0","IDLE","STOP","PUSH"]
 
-for index,item in enumerate(items):
-    try:
-        elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[7]/td[1]")
-        sleep(1)
-        elem.click()
-        elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-        elem.clear()                       
-        sleep(1)
-        elem.send_keys(f"{item}")
-        pyautogui.click(100, 200)
-    except:
-        pass
+loop(7,items)
 
 items=["0","STOP"]
 
-for index,item in enumerate(items):
-    try:
-        elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[8]/td[1]")
-        sleep(1)
-        elem.click()
-        elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-        elem.clear()                       
-        sleep(1)
-        elem.send_keys(f"{item}")
-        pyautogui.click(100, 200)
-    except:
-        pass
+loop(8,items)
 
 items=["DISENGAGE","0","IDLE","STOP","PUSH"]
 
-for index,item in enumerate(items):
-    try:
-        elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[9]/td[1]")
-        sleep(1)
-        elem.click()
-        elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-        elem.clear()                       
-        sleep(1)
-        elem.send_keys(f"{item}")
-        pyautogui.click(100, 200)
-    except:
-        pass
+loop(9,items)
 
 items=["DON,EMER","DON"]
 
-for index,item in enumerate(items):
-    try:
-        elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[10]/td[1]")
-        sleep(1)
-        elem.click()
-        elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-        elem.clear()                       
-        sleep(1)
-        elem.send_keys(f"{item}")
-        pyautogui.click(100, 200)
-    except:
-        pass
+loop(10,items)
 
 items=["PUSH (STRIPPED BAR ON)"]
 
-for index,item in enumerate(items):
-    try:
-        elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[11]/td[1]")
-        sleep(1)
-        elem.click()
-        elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-        elem.clear()                       
-        sleep(1)
-        elem.send_keys(f"{item}")
-        pyautogui.click(100, 200)
-    except:
-        pass
+loop(11,items)
 
 items=["0","PRESS","UP","0","UP","ALTERNATE"]
 
-for index,item in enumerate(items):
-    try:
-        elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[12]/td[1]")
-        sleep(1)
-        elem.click()
-        elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-        elem.clear()                       
-        sleep(1)
-        elem.send_keys(f"{item}")
-        pyautogui.click(100, 200)
-    except:
-        pass
+loop(12,items)
 
 items=["LIGHT ON"]
 
-for index,item in enumerate(items):
-    try:
-        elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[13]/td[1]")
-        sleep(1)
-        elem.click()
-        elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-        elem.clear()                       
-        sleep(1)
-        elem.send_keys(f"{item}")
-        pyautogui.click(100, 200)
-    except:
-        pass
+loop(13,items)
 
 items=["PRESS AND HOLD FOR 20 SECONDS"]
 
-for index,item in enumerate(items):
-    try:
-        elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[14]/td[1]")
-        sleep(1)
-        elem.click()
-        elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-        elem.clear()                       
-        sleep(1)
-        elem.send_keys(f"{item}")
-        pyautogui.click(100, 200)
-    except:
-        pass
+loop(14,items)
 
 items=["DON,EMER","DON"]
 
-for index,item in enumerate(items):
-    try:
-        elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[15]/td[1]")
-        sleep(1)
-        elem.click()
-        elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-        elem.clear()                       
-        sleep(1)
-        elem.send_keys(f"{item}")
-        pyautogui.click(100, 200)
-    except:
-        pass
+loop(15,items)
 
 items=["DISARM"]
 
-for index,item in enumerate(items):
-    try:
-        elem = driver.find_element(By.XPATH, "/html/body/div[4]/div/div[2]/div/div/div/form/table/tbody/tr[3]/td/table/tbody/tr/td[1]/table/tbody/tr/td/table/tbody/tr/td/div/div/div/div[2]/div/div/div/table/tbody/tr[16]/td[1]")
-        sleep(1)
-        elem.click()
-        elem = driver.find_element(By.ID, f"formRealizarProva:tableItensEmergencia:{index}:inputResposta")
-        elem.clear()                       
-        sleep(1)
-        elem.send_keys(f"{item}")
-        pyautogui.click(100, 200)
-    except:
-        pass
+loop(16,items)
 
 elem = driver.find_element(By.ID, "formRealizarProva:botaoTerminarProva")
 sleep(1)
