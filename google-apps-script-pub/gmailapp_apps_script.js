@@ -34,17 +34,17 @@ function sentIf(){
     let quota = MailApp.getRemainingDailyQuota()  
     
     if (date == today + 45){
-      Mail.sendEmail(emailList[i],subject,'Olá '+nameList[i]+', seu CVI vencerá em 45 dias.'+body,{cc: "ceruttimcm@fab.mil.br,leonardodlm@fab.mil.br"})
-      Mail.sendEmail('matheus.cerutti@hotmail.com','ENVIO DE EMAILS','Houve envio de email hoje para '+nameList[i]+',restando apenas '+quota+' emails.')
+      Mail.sendEmail(emailList[i],subject,'Olá '+nameList[i]+', seu CVI vencerá em 45 dias.'+body,{cc: "?,leonardodlm?"})
+      Mail.sendEmail('?','ENVIO DE EMAILS','Houve envio de email hoje para '+nameList[i]+',restando apenas '+quota+' emails.')
     } else if (date == today + 30) {
-      Mail.sendEmail(emailList[i],subject,'Olá '+nameList[i]+', seu CVI vencerá em 30 dias.'+body,{cc: "ceruttimcm@fab.mil.br,leonardodlm@fab.mil.br"})
-      Mail.sendEmail('matheus.cerutti@hotmail.com','ENVIO DE EMAILS','Houve envio de email hoje para '+nameList[i]+',restando apenas '+quota+' emails.')
+      Mail.sendEmail(emailList[i],subject,'Olá '+nameList[i]+', seu CVI vencerá em 30 dias.'+body,{cc: "?,leonardodlm?"})
+      Mail.sendEmail('?','ENVIO DE EMAILS','Houve envio de email hoje para '+nameList[i]+',restando apenas '+quota+' emails.')
     } else if (date == today + 15) {
-      Mail.sendEmail(emailList[i],subject,'Olá '+nameList[i]+', seu CVI vencerá em 15 dias.'+body,{cc: "ceruttimcm@fab.mil.br,leonardodlm@fab.mil.br,mauriciomses@fab.mil.br,ramirorpf@fab.mil.br,ravilarapn@fab.mil.br"})
-      Mail.sendEmail('matheus.cerutti@hotmail.com','ENVIO DE EMAILS','Houve envio de email hoje para '+nameList[i]+',restando apenas '+quota+' emails.')
+      Mail.sendEmail(emailList[i],subject,'Olá '+nameList[i]+', seu CVI vencerá em 15 dias.'+body,{cc: "?,leonardodlm?,mauriciomses?,ramirorpf?,ravilarapn?"})
+      Mail.sendEmail('?','ENVIO DE EMAILS','Houve envio de email hoje para '+nameList[i]+',restando apenas '+quota+' emails.')
     } else if (date == today + 7) {
-      Mail.sendEmail(emailList[i],subject,'Olá '+nameList[i]+', seu CVI vencerá em 7 dias.'+body,{cc: "ceruttimcm@fab.mil.br,leonardodlm@fab.mil.br"})
-      Mail.sendEmail('matheus.cerutti@hotmail.com','ENVIO DE EMAILS','Houve envio de email hoje para '+nameList[i]+',restando apenas '+quota+' emails.')
+      Mail.sendEmail(emailList[i],subject,'Olá '+nameList[i]+', seu CVI vencerá em 7 dias.'+body,{cc: "?,leonardodlm?"})
+      Mail.sendEmail('?','ENVIO DE EMAILS','Houve envio de email hoje para '+nameList[i]+',restando apenas '+quota+' emails.')
     }
   }
 }
@@ -55,7 +55,7 @@ function sentNow(){
 
     let quota = MailApp.getRemainingDailyQuota()  
     
-    Mail.sendEmail(emailList[i],subject,'Olá '+nameList[i]+'.'+body,{cc: "ceruttimcm@fab.mil.br,leonardodlm@fab.mil.br"})
-    Mail.sendEmail('matheus.cerutti@hotmail.com','ENVIO DE EMAILS','Houve envio de email hoje para '+nameList[i]+',restando apenas '+quota+' emails.') 
+    Mail.sendEmail(emailList[i],subject,'Olá '+nameList[i]+'.'+body,{cc: "?,leonardodlm?"})
+    Mail.sendEmail('?','ENVIO DE EMAILS','Houve envio de email hoje para '+nameList[i]+',restando apenas '+quota+' emails.') 
   }
 }
